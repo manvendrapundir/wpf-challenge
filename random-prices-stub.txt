@@ -1,0 +1,13 @@
+private readonly Timer _timer = new Timer(200);
+private readonly Random _random;
+		
+_random = new Random();
+_timer.Start();
+_timer.Elapsed += timer_Elapsed;
+			
+      void timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            int randomNumber = _random.Next(0, Stocks.Count);
+            var stock = Stocks.GetItemAt(randomNumber) as Stock;
+            if (stock != null) stock.CurrentPrice = _random.Next(-100, 100);
+        }
