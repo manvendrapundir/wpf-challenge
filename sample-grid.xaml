@@ -1,0 +1,18 @@
+<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="461*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Stock Name:" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"></Label>
+        <TextBox Name="TextBox1" Margin="10,40,381,242" Grid.ColumnSpan="2"></TextBox>
+        <Button Content="Search" Margin="105.04,40,223,242" Grid.Column="1"></Button>
+        <DataGrid AutoGenerateColumns="False" Margin="0,110,0,0" Grid.ColumnSpan="2" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Symbol"></DataGridTextColumn>
+                <DataGridTextColumn Header="Value Date"></DataGridTextColumn>
+                <DataGridTextColumn Header="Open Price"></DataGridTextColumn>
+                <DataGridTextColumn Header="Current Price"></DataGridTextColumn>
+                <DataGridTextColumn Header="% Change"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+</Grid>
